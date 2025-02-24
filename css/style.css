@@ -1,0 +1,393 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .logo-charizard {
+    display: flex;
+    align-items: center; 
+    gap: 10px;  
+}
+
+  #charizard-gif {
+    width: 60px; 
+    margin-right: 0px; 
+  }
+
+  .logo {
+    align-items: auto;
+    margin-left: 0px;
+  }
+
+  /* Cabeçalho */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cor-primaria);
+    padding: 3px;
+    color: white;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin: 0 15px;
+  }
+
+  .menu a {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none; 
+}
+
+.menu a:hover {
+    color: #ffffff; 
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #ffffff; 
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1); 
+    transform-origin: bottom left; 
+}
+
+  /* Hero Section */
+  .hero {
+    padding: 5px;
+    color: white;
+    background: linear-gradient(-45deg, #f50606, #2f3431, #2f3431, #db0700);
+    background-size: 400% 400%;
+    animation: gradientMove 5s ease infinite;
+    border-radius: 0px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    font-family: Montserrat;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; 
+    animation: typing 2s steps(30) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+  /* Animação do gradiente */
+  @keyframes gradientMove {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+  .btn {
+    background: var(--cor-primaria);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background: #ff0606;
+  }
+  
+  /* Sobre */
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: white;
+}
+
+.text-content {
+    max-width: 600px;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.text-content h1 span {
+    font-size: 48px;
+    font-weight: bold;
+    color: #252525;
+}
+
+.image-content .profile-img {
+    width: 250px;
+    border-radius: 5%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.text-content .intro {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4b4b4b;
+}
+
+.text-content .description {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.image-content .profile-img {
+    width: 250px;
+    border-radius: 2%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Projetos Grid */
+
+
+  .projetos {
+    background-color: #191919;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding: 40px 20px; 
+    margin-top: -2px;
+}
+
+.projetos h2 {
+    color: #f7f7f7;
+    margin-bottom: 30px; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 30px; 
+  width: 100%;
+  max-width: 1000px; 
+  padding: 20px;
+}
+
+.card {
+    border: 1px solid #191919;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card h3 {
+    padding: 10px;
+    text-align: center;
+    background: #f7f7f7;
+    color: #2f3431;
+}
+
+  
+  /* Formulário de Contato */
+  .contato {
+    background-color: #f6f6f6;
+    padding: 50px 0;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-contato {
+    width: 40%;
+}
+
+.info-contato h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-contato p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #333;
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0077b5; /* Cor do LinkedIn */
+}
+
+.social-icons a:nth-child(2):hover {
+    color: #d30505; /* Cor do GitHub */
+}
+
+.social-icons a:nth-child(3):hover {
+    color: #E1306C; /* Cor do Instagram */
+}
+
+.formulario {
+    width: 50%;
+}
+
+.formulario p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #191919;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #9b0000;
+}
+
+  /* Rodapé */
+
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden; 
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  background-color: #222;
+  color: white;
+}
+
+footer::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, red, rgb(66, 23, 7), red);
+  background-size: 200% 100%; 
+  animation: gradientMove 5s linear infinite;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes gradientMove {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}

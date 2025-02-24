@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de site utilizando HTML e CSS avançado.">
+    <title>Thiago Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/Thiago-Website/css/style.css">
+    <link rel="stylesheet" href="/Thiago-Website/css/reponsive.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-charizard">
+                <a href="https://www.pokemon.com/br/pokedex/charizard" target="_blank">
+                    <img src="assets/img/charizard.gif" alt="Charizard" id="charizard-gif">
+                </a>                  
+                <h1 class="logo">TIGAS</h1>
+            </div>
+                <ul class="menu">
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal -->
+    <main>
+        <section id='sobre'>
+            <section class="hero">
+                <h2 id="hero-text"></h2>
+                <script src="/Thiago-Website/js/typing.js"></script>
+            </section>
+
+            <!-- Sobre -->
+            <section class="about-section">
+                <div class="text-content">
+                    <h1><span>Thiago Porto</span></h1>
+                    <p class="intro">Estudante de Análise e Desenvolvimento de Sistemas no UNIFIP.</p>
+                    <p class="description">Buscando me tornar um dev full stack, tenho experiência em desenvolvimento web, UX/UI e projetos na faculdade. Além disso, sou atleta híbrido e estudo neurociências.</p>
+                </div>
+                <div class="image-content">
+                    <img 
+                        src="/Thiago-Website/assets/img/thiago/Thiago.png" 
+                        alt="Minha Foto" 
+                        class="profile-img"
+                        onmouseover="this.src='/Thiago-Website/assets/img/Easteregg.png'"
+                        onmouseout="this.src='/Thiago-Website/assets/img/thiago/Thiago.png'"
+                    >
+                </div>
+            </section>
+            
+            
+            <div class="gallery">
+                <img src="/Thiago-Website/assets/img/thiago/thiago2.jpeg" alt="Foto 1">
+                <img src="/Thiago-Website/assets/img/thiago/thiago4.jpeg" alt="Foto 2">
+                <img src="/Thiago-Website/assets/img/thiago/thiago3.jpeg" alt="Foto 3">
+                <img src="/Thiago-Website/assets/img/thiago/thiago5.jpeg" alt="Foto 4">
+                <img src="/Thiago-Website/assets/img/thiago/thiago6.jpeg" alt="Foto 5">
+            </div>
+        </section>
+        
+        <!-- Projetos -->
+        <section id="projetos" class="projetos">
+            <h2>PROJETOS</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <a href="https://github.com/thiagoports/projects/tree/main/autobot" target="_blank">
+                        <picture>
+                            <source src="/Thiago-Website/assets/img/projetos-mobile/autobot-mobile.png" media="(max-width: 600px)">
+                            <img src="/Thiago-Website/assets/img/projetos/autobot.png" alt="Projeto 1">
+                        </picture>
+                        <h3>Autobot</h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://github.com/Sociau/Sociau-website" target="_blank">
+                        <source srcset="" media="(max-width: 600px)">
+                        <img src="/Thiago-Website/assets/img/projetos/sociau.png" alt="Projeto 2">
+                        <h3>Sociau</h3>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://github.com/thiagoports/projects/tree/main/data_analysis" target="_blank">
+                        <source srcset="" media="(max-width: 600px)">
+                        <img src="/Thiago-Website/assets/img/projetos/dataanalysis.png" alt="Projeto 3">
+                        <h3>Data Analysis</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="info-contato">
+                <h2>Entre em contato</h2>
+                <p>Telefone: (83) 99194-5349</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/thiago-porto-2a40592a4/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/thiagoports" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/thiagoporto_s" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="formulario">
+                <p>Vamos trabalhar juntos!</p>
+                <form>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    <input type="email" id="email" name="email" placeholder="Um endereço de e-mail válido" required>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Thiago Porto Santos. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Plugin VLibras para acessibilidade -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget();</script>
+</body>
+</html>

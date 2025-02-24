@@ -78,7 +78,7 @@
 
   /* Hero Section */
   .hero {
-    padding: 5px;
+    padding: -5px;
     color: white;
     background: linear-gradient(-45deg, #f50606, #2f3431, #2f3431, #db0700);
     background-size: 400% 400%;
@@ -87,7 +87,7 @@
   }
 
   .hero h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: Montserrat;
     white-space: nowrap;
     overflow: hidden;
@@ -176,6 +176,38 @@
     color: #777;
     margin-top: 10px;
 }
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    margin-right: 62%;
+}
+
+.tech-icons img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.tech-icons img:hover {
+    transform: scale(1.2);
+}
+
+.tech-icons i {
+    font-size: 40px;
+    color: #252525;
+    transition: transform 0.3s ease;
+}
+
+.tech-icons i:hover {
+    transform: scale(1.2);
+    color: #9b0000;
+}
+
+
+
 
 .image-content .profile-img {
     width: 250px;

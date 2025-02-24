@@ -56,13 +56,15 @@
         flex-wrap: nowrap; 
     }
 
-    
-    .image-content .profile-img {
-        width: 100px; 
-        height: auto;
-        border-radius: 2%;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    .profile-img {
+        content: url('/Thiago-Website/assets/img/projetos-mobile/thiago-mobile.png');
+        width: 100%; 
+        max-width: 300px; 
+        border-radius: 10px; 
+        display: block; 
+        margin: 0 auto; 
     }
+    
 
     
     .about-header h1 {
@@ -78,6 +80,26 @@
     }
 
 
+/*ÍCONES DE LINGUAGENS*/
+
+    .tech-icons {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        gap: 15px; 
+        margin-top: 15px;
+        margin-left: 50%;
+    }
+
+    .tech-icons img,
+    .tech-icons i {
+        width: 50px;
+        font-size: 20px;
+        margin: 0; 
+    }
+
+
+
  /* SESSÃO DE PROJETOS */
 
     .grid-container {
@@ -90,22 +112,26 @@
     }
 
     .card {
-        width: 90%; 
-        height: 170px;
+        width: 70%;
+        height: 290px;
         max-width: 400px;
-        display: flex; 
-        align-items: center; 
-        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        padding: 0; 
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         background: #fff;
+        overflow: hidden; 
     }
-
+    
     .card img {
-        width: 40%; 
-        height: auto;
-        border-radius: 5px;
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+        border-radius: 8px 8px 0 0; 
     }
+    
 
     .card-content {
         flex: 1; 
